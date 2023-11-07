@@ -56,7 +56,7 @@ void main()
   while(x != 3)
   {
    printf("what do u want to do\n ");
-   printf("[1- enqueu : 2 - dequeu : 3 - exit]\n");
+   printf("[1- enqueu : 2 - dequeu : 3 - exit : 4 - display]\n");
    scanf("%d",&x);
    switch (x)
    {
@@ -79,6 +79,22 @@ void main()
      case 3:
      x = 3;
      break;
+     case 4:
+   if (d.rear >= d.front) {
+       for(int i = d.front+1; i <= d.rear; i++) {
+           printf("%d ", d.arr[i]);
+       }
+   } else {
+       for(int i = d.front+1; i < d.size; i++) {
+           printf("%d ", d.arr[i]);
+       }
+       for(int i = 0; i <= d.rear; i++) {
+           printf("%d ", d.arr[i]);
+       }
+   }
+   printf("\n");
+   break;
+
      default :
      printf("wrong input\n");
      
